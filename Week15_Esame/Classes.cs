@@ -34,7 +34,7 @@ namespace Week15_Esame
     }
     public class ShoppingCart
     {
-        public static List<Product> MyProducts = new List<Product>();
+        public static List<Product> CartProducts = new List<Product>();
     }
 
     public class Products
