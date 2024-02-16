@@ -48,6 +48,7 @@ namespace Week15_Esame
         protected void DeleteFromCartClick(object sender, EventArgs e)
         {
             ShoppingCart.CartProducts.Remove(ShoppingCart.CartProducts.Find(item => item.Id == int.Parse(Request.QueryString["productId"])));
+            Response.Redirect("Cart.aspx");
         }
         protected void AddToCartClick(object sender, EventArgs e)
         {
