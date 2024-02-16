@@ -16,6 +16,7 @@ namespace Week15_Esame
                 IndexRepeater.DataSource = Products.ProductsAvailable;
                 IndexRepeater.DataBind();
             }
+            LblCartCount.Text = $"{ShoppingCart.CartProducts.Count} ITEMS";
         }
 
         protected void DetailClick(object sender, EventArgs e)

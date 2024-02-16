@@ -14,6 +14,7 @@ namespace Week15_Esame
         string htmlContent = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             if (!IsPostBack)
             {
                 if (int.Parse(Request.QueryString["productId"]) > Products.ProductsAvailable.Count())

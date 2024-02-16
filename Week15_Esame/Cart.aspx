@@ -8,6 +8,7 @@
         <div class="d-flex justify-content-center">
             <asp:Button ID="BtnToHome" runat="server" Text="Home" CssClass="btn btn-primary m-3" OnClick="BackToHomeClick" />
             <asp:Button ID="BtnEmptyCart" runat="server" Text="Svuota Carrello" CssClass="btn btn-danger m-3" OnClick="EmptyCartClick" />
+            <asp:Label ID="LblCartCount" runat="server" Text="" CssClass="btn btn-light m-3"></asp:Label>
         </div>
 
     </div>

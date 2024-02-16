@@ -12,6 +12,8 @@ namespace Week15_Esame
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            LblCartCount.Text = $"{ShoppingCart.CartProducts.Count} ITEMS";
+
             if (!IsPostBack)
             {
                 CartRepeater.DataSource = ShoppingCart.CartProducts;
