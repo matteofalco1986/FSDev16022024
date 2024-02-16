@@ -25,8 +25,8 @@ namespace Week15_Esame
                 {
                     productId = int.Parse(Request.QueryString["productId"]);
                     ProductToDisplay = Products.ProductsAvailable.Find(item => item.Id == productId);
-                    htmlContent = $@"<div class=""card"">
-                                            <img class=""card-img-top"" src=""{ProductToDisplay.ImageUrl}"" alt=""{ProductToDisplay.Name}"">
+                    htmlContent = $@"<div class=""card p-3 border-0"">
+                                            <img class=""card-img-top w-25"" src=""{ProductToDisplay.ImageUrl}"" alt=""{ProductToDisplay.Name}"">
                                             <div class=""card-body"">
                                                 <h5 class=""card-title"">{ProductToDisplay.Name}</h5>
                                                 <h6 class=""card-text"">{ProductToDisplay.Brand}</h6>
