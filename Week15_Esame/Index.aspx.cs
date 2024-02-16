@@ -30,7 +30,11 @@ namespace Week15_Esame
         }
         protected void DetailClick(int id)
         {
-            Response.Redirect($"/Detail.aspx?productId={id}");
+            Response.Redirect($"Detail.aspx?productId={id}");
+        }
+        protected void GoToCartClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Cart.aspx");
         }
     }
 }

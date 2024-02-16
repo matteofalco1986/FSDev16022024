@@ -8,4 +8,6 @@
         
         </div>
     </div>
+    <asp:Button ID="BtnToCart" runat="server" Text="Go to Cart" CssClass="btn btn-black" OnClick="GoToCartClick"/>
+
 </asp:Content>

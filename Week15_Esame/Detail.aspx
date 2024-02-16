@@ -9,6 +9,5 @@
     <asp:Button ID="BackToHome" runat="server" Text="BackToHome" CssClass="btn btn-primary" OnClick="BackToHomeClick"/>
     <asp:Button ID="BtnDeleteProduct" runat="server" Text="Delete from Cart" CssClass="btn btn-danger" OnClick="DeleteFromCartClick"/>
     <asp:Button ID="BtnAddProduct" runat="server" Text="Add to Cart" CssClass="btn btn-success" OnClick="AddToCartClick"/>
-
-
+    <asp:Button ID="BtnToCart" runat="server" Text="Go to Cart" CssClass="btn btn-black" OnClick="GoToCartClick"/>
 </asp:Content>
