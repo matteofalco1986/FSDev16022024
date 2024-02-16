@@ -36,4 +36,9 @@ namespace Week15_Esame
     {
         public static List<Product> MyProducts = new List<Product>();
     }
+
+    public class Products
+    {
+        public static List<Product> ProductsAvailable = new List<Product>();
+    }
 }

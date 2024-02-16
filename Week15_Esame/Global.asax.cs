@@ -11,8 +11,13 @@ namespace Week15_Esame
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            InitializeProducts();
+        }
+
+        protected void InitializeProducts()
+        {
             Product Product1 = new Product(
-                1, 
+                1,
                 "Eco-Friendly Reusable Water Bottle",
                 "Ocean",
                 "Stay hydrated and environmentally conscious with our 32oz stainless steel, vacuum-insulated water bottle. Keeps drinks cold for up to 24 hours or hot for 12. BPA-free and comes with a leak-proof lid.",
@@ -28,8 +33,8 @@ namespace Week15_Esame
             Product Product3 = new Product(
                 3,
                 "Organic Matcha Tea Powder",
-                "Sourced from the finest tea gardens in Japan, our organic matcha is perfect for tea, lattes, and baking. Rich in antioxidants and vibrant green in color, our matcha offers a smooth flavor and numerous health benefits",
                 "Heapwell",
+                "Sourced from the finest tea gardens in Japan, our organic matcha is perfect for tea, lattes, and baking. Rich in antioxidants and vibrant green in color, our matcha offers a smooth flavor and numerous health benefits",
                 "https://m.media-amazon.com/images/I/81qZlPCzZDL._AC_UF1000,1000_QL80_.jpg",
                 24.99);
             Product Product4 = new Product(
@@ -53,6 +58,13 @@ namespace Week15_Esame
                 "Stay charged wherever you go with our portable solar charger. Ideal for camping and outdoor adventures, it's durable, waterproof, and compatible with all smartphones and tablets. Provides up to 2 full charges.",
                 "https://m.media-amazon.com/images/I/811YIHVKKaL._AC_UF1000,1000_QL80_.jpg",
                 49.99);
+
+            Products.ProductsAvailable.Add(Product1);
+            Products.ProductsAvailable.Add(Product2);
+            Products.ProductsAvailable.Add(Product3);
+            Products.ProductsAvailable.Add(Product4);
+            Products.ProductsAvailable.Add(Product5);
+            Products.ProductsAvailable.Add(Product6);
         }
     }
 }
