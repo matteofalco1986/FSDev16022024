@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -19,8 +20,8 @@ namespace Week15_Esame
             if (ShoppingCart.CartProducts.Count == 0)
             {
                 string htmlContent = "";
-                htmlContent = "<h2>The cart is empty</h2>";
-                CartList.InnerHtml = htmlContent;
+                htmlContent = "<h2 class='text-center'>Il carrello e' vuoto</h2>";
+                PageContainer.InnerHtml = htmlContent;
             }
         }
         protected void BackToHomeClick(object sender, EventArgs e)
