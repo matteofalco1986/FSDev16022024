@@ -14,7 +14,7 @@ namespace Week15_Esame
         string htmlContent = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            ShoppingCart.SetCartAmount();
             if (!IsPostBack)
             {
                 if (int.Parse(Request.QueryString["productId"]) > Products.ProductsAvailable.Count())
@@ -60,6 +60,7 @@ namespace Week15_Esame
                 Products.ProductsAvailable.Find(item => item.Id == int.Parse(Request.QueryString["productId"])).Price
             );
             ShoppingCart.CartProducts.Add(CurrentProduct);
+            Response.Redirect("Cart.aspx");
         }
         protected void GoToCartClick(object sender, EventArgs e)
         {

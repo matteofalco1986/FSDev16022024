@@ -9,6 +9,7 @@
             <div class="d-flex align-items-center">
                 <asp:Button ID="BtnToCart" runat="server" Text="Carrello" CssClass="btn btn-primary d-flex justify-content-end mb-3" OnClick="GoToCartClick" />
                 <asp:Label ID="LblCartCount" runat="server" Text="" CssClass="btn btn-light mb-3 mr-2"></asp:Label>
+                <asp:Label ID="LblCartAmount" runat="server" Text="" CssClass="btn btn-light mb-3 mr-2"></asp:Label>
             </div>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" id="ProductsList" runat="server">

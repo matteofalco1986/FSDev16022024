@@ -16,6 +16,7 @@ namespace Week15_Esame
 
         protected void InitializeProducts()
         {
+            // Istantiate products
             Product Product1 = new Product(
                 1,
                 "Eco-Friendly Reusable Water Bottle",
@@ -58,13 +59,46 @@ namespace Week15_Esame
                 "Stay charged wherever you go with our portable solar charger. Ideal for camping and outdoor adventures, it's durable, waterproof, and compatible with all smartphones and tablets. Provides up to 2 full charges.",
                 "https://m.media-amazon.com/images/I/811YIHVKKaL._AC_UF1000,1000_QL80_.jpg",
                 49.99);
+            Product Product7 = new Product(
+                7,
+                "Aromatherapy Essential Oil Diffuser",
+                "Vitaviv",
+                "Transform your space into a tranquil oasis with our ultrasonic essential oil diffuser. Features 7 LED color options, multiple mist settings, and an auto-shutoff feature for safety. Perfect for home or office use",
+                "https://purplecloudnaturallavender.com/wp-content/uploads/2020/11/Designer-Aroma-Diffuser-1-img.jpg",
+                39.99);
+            Product Product8 = new Product(
+                8,
+                "Adjustable Standing Desk",
+                "Flexispot",
+                "Boost your productivity with our adjustable standing desk. Easily transitions from sitting to standing with a smooth crank handle. Sturdy, spacious, and ergonomically designed for comfort during long work hours.",
+                "https://m.media-amazon.com/images/I/61myrf5OIfL._AC_UF894,1000_QL80_.jpg",
+                299.99);
+            Product Product9 = new Product(
+                9,
+                "Compact Travel Yoga Mat",
+                "Eminflex Lite",
+                "Stay active on the go with our lightweight and compact travel yoga mat. Made with eco-friendly materials, it provides excellent grip and cushioning. Includes a carrying strap for easy transport.",
+                "https://m.media-amazon.com/images/I/917W7a3QsnL._AC_UF894,1000_QL80_.jpg",
+                39.99);
+            Product Product10 = new Product(
+                10,
+                "Luxury Silk Pillowcase",
+                "Mulberry",
+                "Enhance your beauty sleep with our 100% mulberry silk pillowcase. Hypoallergenic and gentle on skin and hair, it helps prevent wrinkles and split ends. Available in various colors to match your bedding.",
+                "https://www.costco.co.uk/medias/sys_master/images/h18/ha8/119702131408926.jpg",
+                49.99);
 
+            // Add products to available products
             Products.ProductsAvailable.Add(Product1);
             Products.ProductsAvailable.Add(Product2);
             Products.ProductsAvailable.Add(Product3);
             Products.ProductsAvailable.Add(Product4);
             Products.ProductsAvailable.Add(Product5);
             Products.ProductsAvailable.Add(Product6);
+            Products.ProductsAvailable.Add(Product7);
+            Products.ProductsAvailable.Add(Product8);
+            Products.ProductsAvailable.Add(Product9);
+            Products.ProductsAvailable.Add(Product10);
         }
     }
 }

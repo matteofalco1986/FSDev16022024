@@ -35,6 +35,23 @@ namespace Week15_Esame
     public class ShoppingCart
     {
         public static List<Product> CartProducts = new List<Product>();
+        public static double TotalCartAmount = 0;
+        public static void SetCartAmount()
+        {
+            if (ShoppingCart.CartProducts.Count > 0)
+            {
+                double TotalCart = 0;
+                foreach (var item in ShoppingCart.CartProducts)
+                {
+                    TotalCart += item.Price;
+                }
+                ShoppingCart.TotalCartAmount = TotalCart;
+            }
+            else
+            {
+                ShoppingCart.TotalCartAmount = 0;
+            }
+        }
     }
 
     public class Products

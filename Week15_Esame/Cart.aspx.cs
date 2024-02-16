@@ -12,7 +12,22 @@ namespace Week15_Esame
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LblCartCount.Text = $"{ShoppingCart.CartProducts.Count} ITEMS";
+            ShoppingCart.SetCartAmount();
+            LblCartAmount.Text = $"Totale: {ShoppingCart.TotalCartAmount} &euro;";
+
+            if (ShoppingCart.CartProducts.Count == 0)
+            {
+                LblCartCount.Text = $"Nessun articolo";
+
+            }
+            else if (ShoppingCart.CartProducts.Count == 1)
+            {
+                LblCartCount.Text = $"{ShoppingCart.CartProducts.Count} Articolo";
+            }
+            else
+            {
+                LblCartCount.Text = $"{ShoppingCart.CartProducts.Count} Articoli";
+            }
 
             if (!IsPostBack)
             {
