@@ -11,31 +11,27 @@ namespace Week15_Esame
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string htmlContent = "";
-            for (int i = 0; i < ShoppingCart.CartProducts.Count; i++)
+            if (!IsPostBack)
             {
-                htmlContent += $@"<div class=""col"">
-                                                <div class=""card"">
-                                                    <img class=""card-img-top"" src=""{ShoppingCart.CartProducts[i].ImageUrl}"" alt=""{ShoppingCart.CartProducts[i].Name}"">
-                                                    <div class=""card-body"">
-                                                        <h5 class=""card-title"">{ShoppingCart.CartProducts[i].Name}</h5>
-                                                        <h6 class=""card-text"">{ShoppingCart.CartProducts[i].Brand}</h6>
-                                                        <p class=""card-text"">{ShoppingCart.CartProducts[i].Price} &euro;</p>
-                                                    </div>
-                                                </div>
-                                            </div>";
+                CartRepeater.DataSource = ShoppingCart.CartProducts;
+                CartRepeater.DataBind();
             }
-            foreach (var item in ShoppingCart.CartProducts)
+            if (ShoppingCart.CartProducts.Count == 0)
             {
-                Response.Write(item.Name);
-
+                string htmlContent = "";
+                htmlContent = "<h2>The cart is empty</h2>";
+                CartList.InnerHtml = htmlContent;
             }
-
-            CartList.InnerHtml = htmlContent;
         }
         protected void BackToHomeClick(object sender, EventArgs e)
         {
             Response.Redirect("Index.aspx");
+        }
+        protected void EmptyCartClick(object sender, EventArgs e)
+        {
+            ShoppingCart.CartProducts.Clear();
+            Response.Redirect("Cart.aspx");
+
         }
     }
 }

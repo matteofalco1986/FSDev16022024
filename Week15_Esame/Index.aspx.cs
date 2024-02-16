@@ -11,26 +11,18 @@ namespace Week15_Esame
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string htmlContent = "";
-            foreach (var item in Products.ProductsAvailable)
+            if (!IsPostBack)
             {
-                htmlContent += $@"<div class=""col"">
-                                    <div class=""card"">
-                                        <img class=""card-img-top"" src=""{item.ImageUrl}"" alt=""{item.Name}"">
-                                        <div class=""card-body"">
-                                            <h5 class=""card-title"">{item.Name}</h5>
-                                            <h6 class=""card-text"">{item.Brand}</h6>
-                                            <p class=""card-text"">{item.Price} &euro;</p>
-                                        </div>
-                                    </div>
-                                </div>";
+                IndexRepeater.DataSource = Products.ProductsAvailable;
+                IndexRepeater.DataBind();
             }
-
-            ProductsList.InnerHtml = htmlContent;
         }
-        protected void DetailClick(int id)
+
+        protected void DetailClick(object sender, EventArgs e)
         {
-            Response.Redirect($"Detail.aspx?productId={id}");
+            Button btn = (Button)sender;
+            string argument = btn.CommandArgument;
+            Response.Redirect($"Detail.aspx?productId=" + argument);
         }
         protected void GoToCartClick(object sender, EventArgs e)
         {

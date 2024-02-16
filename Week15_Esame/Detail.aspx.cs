@@ -46,7 +46,7 @@ namespace Week15_Esame
 
         protected void DeleteFromCartClick(object sender, EventArgs e)
         {
-            // ShoppingCart.CartProducts.Remove(ShoppingCart.CartProducts.Find(item => item.Id == CurrentProduct.Id));
+            ShoppingCart.CartProducts.Remove(ShoppingCart.CartProducts.Find(item => item.Id == int.Parse(Request.QueryString["productId"])));
         }
         protected void AddToCartClick(object sender, EventArgs e)
         {
@@ -59,17 +59,10 @@ namespace Week15_Esame
                 Products.ProductsAvailable.Find(item => item.Id == int.Parse(Request.QueryString["productId"])).Price
             );
             ShoppingCart.CartProducts.Add(CurrentProduct);
-
         }
-
         protected void GoToCartClick(object sender, EventArgs e)
         {
             Response.Redirect("Cart.aspx");
-        }
-
-        protected void PopulateCurrentProduct()
-        {
-
         }
     }
 }

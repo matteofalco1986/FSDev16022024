@@ -24,6 +24,15 @@ namespace Week15_Esame
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl CartList;
 
         /// <summary>
+        /// CartRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater CartRepeater;
+
+        /// <summary>
         /// BtnToHome control.
         /// </summary>
         /// <remarks>
@@ -31,5 +40,14 @@ namespace Week15_Esame
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnToHome;
+
+        /// <summary>
+        /// BtnEmptyCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnEmptyCart;
     }
 }

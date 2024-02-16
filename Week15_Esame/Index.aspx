@@ -5,9 +5,23 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="server">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6" id="ProductsList" runat="server">
-        
+            <asp:Repeater ID="IndexRepeater" runat="server">
+                <ItemTemplate>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img-top" src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Name") %>'>
+                            <div class="card-body">
+                                <h5 class="card-title"><%# Eval("Name") %></h5>
+                                <h6 class="card-text">'<%# Eval("Brand") %>'</h6>
+                                <p class="card-text"><%# Eval("Price") %> &euro;</p>
+                                <asp:Button ID="BtnDettagli" runat="server" Text="Dettagli" OnClick="DetailClick" CommandArgument=<%# Eval("Id") %> CssClass="btn btn-success"/>
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
     </div>
-    <asp:Button ID="BtnToCart" runat="server" Text="Go to Cart" CssClass="btn btn-black" OnClick="GoToCartClick"/>
+    <asp:Button ID="BtnToCart" runat="server" Text="Go to Cart" CssClass="btn btn-light" OnClick="GoToCartClick" />
 
 </asp:Content>
