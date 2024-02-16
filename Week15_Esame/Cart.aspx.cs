@@ -27,6 +27,15 @@ namespace Week15_Esame
         {
             Response.Redirect("Index.aspx");
         }
+        protected void DeleteArticle(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            string argument = btn.CommandArgument;
+            Product ItemToFind = ShoppingCart.CartProducts.Find(item => item.Id == int.Parse(argument));
+            int index = ShoppingCart.CartProducts.IndexOf(ItemToFind);
+            ShoppingCart.CartProducts.RemoveAt(index);
+            Response.Redirect("Cart.aspx");
+        }
         protected void EmptyCartClick(object sender, EventArgs e)
         {
             ShoppingCart.CartProducts.Clear();

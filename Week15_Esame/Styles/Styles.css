@@ -1,2 +1,6 @@
 ﻿body {
 }
+
+.card, img {
+    max-width: 500px;
+}

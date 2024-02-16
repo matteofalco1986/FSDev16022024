@@ -14,9 +14,8 @@
                             <div class="card-body">
                                 <h5 class="card-title"><%# Eval("Name") %></h5>
                                 <h6 class="card-text">'<%# Eval("Brand") %>'</h6>
-                                <p class="card-text"><%# Eval("Description") %> &euro;</p>
                                 <p class="card-text"><%# Eval("Price") %> &euro;</p>
-
+                                <asp:Button ID="BtnDelete" runat="server" Text="Elimina dal carrello" OnClick="DeleteArticle" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-danger" />
                             </div>
                         </div>
                     </div>
