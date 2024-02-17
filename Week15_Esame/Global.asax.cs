@@ -100,5 +100,7 @@ namespace Week15_Esame
             Products.ProductsAvailable.Add(Product9);
             Products.ProductsAvailable.Add(Product10);
         }
+
+
     }
 }

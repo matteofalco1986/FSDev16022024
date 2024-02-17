@@ -17,7 +17,7 @@
                     <ItemTemplate>
                         <div class="col mb-3">
                             <div class="card">
-                                <img class="card-img-top" src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Name") %>'>
+                                    <img class="" src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Name") %>' />
                                 <div class="card-body">
                                     <h5 class="card-title"><%# Eval("Name") %></h5>
                                     <h6 class="card-text">'<%# Eval("Brand") %>'</h6>
